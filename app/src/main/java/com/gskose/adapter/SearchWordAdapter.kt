@@ -35,6 +35,13 @@ class SearchWordAdapter(
                 holder.binding.searchWord = searchWordModel?.get(position)
             }
         }
+        if (position % 2 != 0) {
+            holder.binding.txtSearchWord.setBackgroundColor(context.resources.getColor(R.color.search_back_1))
+            holder.binding.txtSearchWordResults.setBackgroundColor(context.resources.getColor(R.color.search_back_1))
+        } else {
+            holder.binding.txtSearchWord.setBackgroundColor(context.resources.getColor(R.color.search_back_2))
+            holder.binding.txtSearchWordResults.setBackgroundColor(context.resources.getColor(R.color.search_back_2))
+        }
     }
 
     override fun getItemCount(): Int {

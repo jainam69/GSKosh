@@ -41,10 +41,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/height_1"
-                    android:layout_marginStart="@dimen/height_10"
-                    android:layout_marginEnd="@dimen/height_10"
-                    android:visibility="gone"
-                    android:background="@color/white" />
+                    android:background="#336C6A6A" />
 
                 <com.gskose.utils.TfTextView
                     android:id="@+id/txtSearchWordResults"
