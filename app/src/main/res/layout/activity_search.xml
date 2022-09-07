@@ -34,9 +34,9 @@
         android:layout_marginTop="@dimen/height_20"
         android:background="@drawable/btn_back"
         android:text="@string/search"
-        android:visibility="gone"
         android:textAllCaps="false"
         android:textColor="@color/white"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
@@ -57,13 +57,16 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="@dimen/margin_20"
         android:layout_marginEnd="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/height_10"
         android:visibility="gone"
         app:cardCornerRadius="@dimen/height_10"
         app:cardElevation="@dimen/height_1"
         app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtSearchResult">
 
