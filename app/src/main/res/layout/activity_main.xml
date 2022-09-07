@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.main.MainActivity">
+
+    <include
+        android:id="@+id/layout"
+        layout="@layout/toolbar_activity" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/height_20"
+        android:layout_marginTop="@dimen/height_35"
+        android:layout_marginEnd="@dimen/height_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout">
+
+        <com.gskose.utils.TfTextView
+            android:id="@+id/txtSelectLanguage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/select_language"
+            android:textColor="@color/black_29"
+            app:isBold="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <info.hoang8f.android.segmented.SegmentedGroup
+            android:id="@+id/segmented2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/height_10"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSelectLanguage"
+            segmentedgroup:sc_border_width="@dimen/height_1"
+            segmentedgroup:sc_checked_text_color="@color/black_29"
+            segmentedgroup:sc_corner_radius="@dimen/height_5">
+
+            <RadioButton
+                android:id="@+id/rdbGujSan"
+                style="@style/RadioButton"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/height_35"
+                android:checked="true"
+                android:fontFamily="@font/nunito_semibold_0"
+                android:text="@string/guj_sans" />
+
+            <RadioButton
+                android:id="@+id/rdbSanGuj"
+                style="@style/RadioButton"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/height_35"
+                android:fontFamily="@font/nunito_semibold_0"
+                android:text="@string/sans_guj" />
+
+        </info.hoang8f.android.segmented.SegmentedGroup>
+
+        <com.gskose.utils.TfTextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20"
+            android:text="@string/select_search_criteria"
+            android:textColor="@color/black_29"
+            app:isBold="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/segmented2" />
+
+        <info.hoang8f.android.segmented.SegmentedGroup
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/height_10"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            segmentedgroup:sc_border_width="@dimen/height_1"
+            segmentedgroup:sc_checked_text_color="@color/black_29"
+            segmentedgroup:sc_corner_radius="@dimen/height_5">
+
+            <RadioButton
+                android:id="@+id/rdbExact"
+                style="@style/RadioButton"
+                android:layout_width="@dimen/height_100"
+                android:layout_height="@dimen/height_35"
+                android:checked="true"
+                android:fontFamily="@font/nunito_regular_0"
+                android:text="@string/exact"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rdbAnywhere"
+                style="@style/RadioButton"
+                android:layout_width="@dimen/height_100"
+                android:layout_height="@dimen/height_35"
+                android:fontFamily="@font/nunito_regular_0"
+                android:text="@string/anywhere"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rdbStartFrom"
+                style="@style/RadioButton"
+                android:layout_width="@dimen/height_120"
+                android:layout_height="@dimen/height_35"
+                android:fontFamily="@font/nunito_regular_0"
+                android:text="@string/starting_from"
+                android:textStyle="bold" />
+
+        </info.hoang8f.android.segmented.SegmentedGroup>
+
+        <com.gskose.utils.DownOnlyAutoCompleteTextView
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/height_20"
+            android:background="@drawable/edt_back"
+            android:fontFamily="@font/nunito_regular_0"
+            android:padding="@dimen/margin_8"
+            android:popupBackground="#808080"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <com.gskose.utils.TfButton
+            android:id="@+id/btnSearch1"
+            android:layout_width="150dp"
+            android:layout_height="@dimen/height_30"
+            android:layout_marginTop="@dimen/height_20"
+            android:background="@drawable/btn_back"
+            android:text="@string/search"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+        <com.gskose.utils.TfTextView
+            android:id="@+id/txtSearchResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/height_10"
+            android:text="@string/searched_result"
+            android:textColor="@color/black_29"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSearch1" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:cardCornerRadius="@dimen/height_10"
+            app:cardElevation="@dimen/height_1"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSearchResult">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSearchWord"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.gskose.utils.TfButton
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_40"
+        android:layout_marginTop="@dimen/height_20"
+        android:background="@color/colorPrimary"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

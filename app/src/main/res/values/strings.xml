@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GS Kosh</string>
+    <string name="select_language">Select Language</string>
+    <string name="guj_sans"><![CDATA[ગુજરાતી -> સંસ્કૃત]]></string>
+    <string name="sans_guj"><![CDATA[સંસ્કૃત -> ગુજરાતી]]></string>
+    <string name="success">Success</string>
+    <string name="select_search_criteria">Select search criteria</string>
+    <string name="exact">Exact</string>
+    <string name="anywhere">Anywhere</string>
+    <string name="starting_from">Starting From</string>
+    <string name="search">Search</string>
+    <string name="next">Next</string>
+    <string name="check_your_internet">Please check your internet connection!!</string>
+    <string name="searched_result">Searched Result</string>
+    <string name="search_result_not_found">Search Result not found</string>
+    <string name="please_enter_word">Please enter word or search or select word</string>
+    <string name="search_keyword">Search Keyword</string>
+</resources>
