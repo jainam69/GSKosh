@@ -1,1 +1,1 @@
-# GS-Kosh
+# GSKosh
