@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <import type="com.gskose.custom.Converter" />
+
         <variable
             name="searchWord"
             type="com.gskose.model.SearchWordModel" />
@@ -28,29 +30,33 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <com.gskose.utils.TfTextView
+                <TextView
                     android:id="@+id/txtSearchWord"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/height_10"
                     android:background="#4D006FFF"
+                    android:fontFamily="@font/khand_regular"
+                    android:padding="@dimen/height_10"
                     android:text="@={searchWord.searchWord}"
                     android:textColor="@color/black"
-                    app:isBold="true" />
+                    android:textSize="@dimen/text_size_20" />
 
-                <View
+                <com.gskose.utils.TfTextView
+                    android:id="@+id/viewLine"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/height_1"
                     android:background="#336C6A6A" />
 
-                <com.gskose.utils.TfTextView
+                <TextView
                     android:id="@+id/txtSearchWordResults"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/height_10"
                     android:background="#4D1456AB"
+                    android:fontFamily="@font/khand_regular"
+                    android:padding="@dimen/height_10"
                     android:text="@{Converter.convertListToString(searchWord.searchWordResults)}"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_20" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

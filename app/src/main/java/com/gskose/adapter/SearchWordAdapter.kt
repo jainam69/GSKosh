@@ -37,9 +37,11 @@ class SearchWordAdapter(
         }
         if (position % 2 != 0) {
             holder.binding.txtSearchWord.setBackgroundColor(context.resources.getColor(R.color.search_back_1))
+            holder.binding.viewLine.setBackgroundColor(context.resources.getColor(R.color.search_line_1))
             holder.binding.txtSearchWordResults.setBackgroundColor(context.resources.getColor(R.color.search_back_1))
         } else {
             holder.binding.txtSearchWord.setBackgroundColor(context.resources.getColor(R.color.search_back_2))
+            holder.binding.viewLine.setBackgroundColor(context.resources.getColor(R.color.search_line_2))
             holder.binding.txtSearchWordResults.setBackgroundColor(context.resources.getColor(R.color.search_back_2))
         }
     }

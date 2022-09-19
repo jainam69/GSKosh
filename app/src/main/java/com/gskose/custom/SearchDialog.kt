@@ -7,13 +7,12 @@ import android.graphics.drawable.ColorDrawable
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.DisplayMetrics
-import android.view.LayoutInflater
-import android.view.View
-import android.view.Window
-import android.view.WindowManager
+import android.view.*
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.view.inputmethod.EditorInfo
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gskose.R
@@ -90,6 +89,13 @@ class SearchDialog(
         actionListner()
         if (text != "") {
             editTextTextPersonName.setText(text)
+        }
+
+        editTextTextPersonName.setOnEditorActionListener { p0, actionId, p2 ->
+            CommonUtils.hideKeyPad(context, editTextTextPersonName)
+            onSelected.select(editTextTextPersonName.text.toString())
+            dismiss()
+            false
         }
     }
 

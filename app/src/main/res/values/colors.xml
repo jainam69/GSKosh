@@ -19,8 +19,10 @@
     <color name="colorWarning">#F9A220</color>
     <color name="colorError">#EF5350</color>
     <color name="colorInfo">#FD8F5F</color>
-    <color name="search_back_1">#4D006FFF</color>
-    <color name="search_back_2">#4D1456AB</color>
+    <color name="search_back_1">#FAFAFA</color>
+    <color name="search_line_1">#336C6A6A</color>
+    <color name="search_back_2">#FFCCCB</color>
+    <color name="search_line_2">#FFFFFF</color>
     <color name="search_back_3">#FD8F5F</color>
     <color name="search_back_4">#FD8F5F</color>
 </resources>

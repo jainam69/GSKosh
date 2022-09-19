@@ -65,7 +65,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edt_back"
-                    android:fontFamily="@font/nunito_regular_0"
+                    android:inputType="text"
+                    android:imeOptions="actionSend"
+                    android:textSize="@dimen/text_size_20"
+                    android:fontFamily="@font/khand_bold"
                     android:padding="@dimen/margin_8" />
 
                 <androidx.appcompat.widget.AppCompatImageView

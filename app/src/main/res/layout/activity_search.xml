@@ -20,9 +20,10 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/edt_back"
-        android:fontFamily="@font/nunito_regular_0"
+        android:fontFamily="@font/khand_bold"
         android:padding="@dimen/margin_8"
         android:textColor="@color/black_23"
+        android:textSize="@dimen/text_size_20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout" />
@@ -48,9 +49,11 @@
         android:layout_marginStart="@dimen/margin_20"
         android:layout_marginTop="@dimen/height_10"
         android:layout_marginEnd="@dimen/height_20"
+        android:fontFamily="@font/nunito_semibold_0"
         android:text="@string/searched_result"
         android:textColor="@color/black_29"
         android:visibility="gone"
+        app:isBold="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
 

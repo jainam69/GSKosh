@@ -66,6 +66,7 @@
     ******************************Extra****************************************
 
     <dimen name="height_320">320dp</dimen>
+    <dimen name="height_230">230dp</dimen>
     <dimen name="height_325">325dp</dimen>
     <dimen name="height_43">43dp</dimen>
     <dimen name="height_280">280dp</dimen>

@@ -266,7 +266,7 @@ object CommonUtils {
     }
 
     fun getBoldFont(_context: Context): Typeface {
-        return Typeface.createFromAsset(_context.assets, "fonts/Nunito-SemiBold_0.ttf")
+        return Typeface.createFromAsset(_context.assets, "fonts/Nunito-Bold.ttf")
     }
 
     fun fireIntentWithURL(context: BaseActivity, uri: String) {
