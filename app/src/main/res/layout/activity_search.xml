@@ -42,18 +42,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
-    <com.gskose.utils.TfTextView
+    <TextView
         android:id="@+id/txtSearchResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_20"
         android:layout_marginTop="@dimen/height_10"
         android:layout_marginEnd="@dimen/height_20"
-        android:fontFamily="@font/nunito_semibold_0"
+        android:textStyle="bold"
+        android:visibility="gone"
         android:text="@string/searched_result"
         android:textColor="@color/black_29"
-        android:visibility="gone"
-        app:isBold="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
 

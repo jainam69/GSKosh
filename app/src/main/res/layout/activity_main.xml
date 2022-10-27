@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout">
 
-        <com.gskose.utils.TfTextView
+        <TextView
             android:id="@+id/txtSelectLanguage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -31,7 +31,6 @@
             android:textAllCaps="true"
             android:textColor="@color/black_29"
             android:textStyle="bold"
-            app:isBold="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,7 +53,7 @@
                 android:layout_width="150dp"
                 android:layout_height="@dimen/height_35"
                 android:checked="true"
-                android:fontFamily="@font/khand_semibold"
+                android:textStyle="bold"
                 android:text="@string/guj_sans" />
 
             <RadioButton
@@ -62,12 +61,12 @@
                 style="@style/RadioButton"
                 android:layout_width="150dp"
                 android:layout_height="@dimen/height_35"
-                android:fontFamily="@font/khand_semibold"
+                android:textStyle="bold"
                 android:text="@string/sans_guj" />
 
         </info.hoang8f.android.segmented.SegmentedGroup>
 
-        <com.gskose.utils.TfTextView
+        <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -76,7 +75,6 @@
             android:textAllCaps="true"
             android:textColor="@color/black_29"
             android:textStyle="bold"
-            app:isBold="true"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/segmented2" />
 
@@ -99,7 +97,6 @@
                 android:layout_width="@dimen/height_100"
                 android:layout_height="@dimen/height_35"
                 android:checked="true"
-                android:fontFamily="@font/nunito_regular_0"
                 android:text="@string/exact"
                 android:textStyle="bold" />
 
@@ -108,7 +105,6 @@
                 style="@style/RadioButton"
                 android:layout_width="@dimen/height_100"
                 android:layout_height="@dimen/height_35"
-                android:fontFamily="@font/nunito_regular_0"
                 android:text="@string/anywhere"
                 android:textStyle="bold" />
 
@@ -117,7 +113,6 @@
                 style="@style/RadioButton"
                 android:layout_width="@dimen/height_120"
                 android:layout_height="@dimen/height_35"
-                android:fontFamily="@font/nunito_regular_0"
                 android:text="@string/starting_from"
                 android:textStyle="bold" />
 
@@ -137,15 +132,16 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
         <com.gskose.utils.TfButton
-            android:id="@+id/btnSearch1"
-            android:layout_width="150dp"
-            android:layout_height="@dimen/height_30"
-            android:layout_marginTop="@dimen/height_20"
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_40"
+            android:layout_marginTop="@dimen/margin_60"
             android:background="@drawable/btn_back"
-            android:text="@string/search"
+            android:text="@string/next"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:visibility="gone"
+            android:paddingStart="@dimen/height_80"
+            android:paddingEnd="@dimen/height_80"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
@@ -159,7 +155,7 @@
             android:textColor="@color/black_29"
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnSearch1" />
+            app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
@@ -182,7 +178,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.gskose.utils.TfButton
-        android:id="@+id/btnSearch"
+        android:id="@+id/btnSearch1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/height_40"
         android:layout_marginTop="@dimen/height_20"
@@ -191,6 +187,7 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_18"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

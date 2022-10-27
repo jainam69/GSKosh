@@ -2,6 +2,7 @@ package com.gskose.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.res.ResourcesCompat
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.gskose.R
@@ -11,7 +12,8 @@ import com.gskose.model.SearchWordModel
 
 class SearchWordAdapter(
     var context: BaseActivity,
-    var searchWordModel: List<SearchWordModel>?
+    var searchWordModel: List<SearchWordModel>?,
+    var selectLanguage: String = ""
 ) :
     RecyclerView.Adapter<SearchWordAdapter.MainSearchWordViewHolder>() {
 
@@ -38,11 +40,22 @@ class SearchWordAdapter(
         if (position % 2 != 0) {
             holder.binding.txtSearchWord.setBackgroundColor(context.resources.getColor(R.color.search_back_1))
             holder.binding.viewLine.setBackgroundColor(context.resources.getColor(R.color.search_line_1))
-            holder.binding.txtSearchWordResults.setBackgroundColor(context.resources.getColor(R.color.search_back_1))
+            holder.binding.txtSearchWordResults.setBackgroundColor(context.resources.getColor(R.color.search_back_2))
         } else {
-            holder.binding.txtSearchWord.setBackgroundColor(context.resources.getColor(R.color.search_back_2))
+            holder.binding.txtSearchWord.setBackgroundColor(context.resources.getColor(R.color.search_back_1))
             holder.binding.viewLine.setBackgroundColor(context.resources.getColor(R.color.search_line_2))
             holder.binding.txtSearchWordResults.setBackgroundColor(context.resources.getColor(R.color.search_back_2))
+        }
+        if (selectLanguage.toInt() == 1) {
+            val typeface = ResourcesCompat.getFont(context, R.font.hindvadodara_bold)
+            holder.binding.txtSearchWord.typeface = typeface
+            val typeface1 = ResourcesCompat.getFont(context, R.font.adobedevanagari_bold)
+            holder.binding.txtSearchWordResults.typeface = typeface1
+        } else {
+            val typeface = ResourcesCompat.getFont(context, R.font.adobedevanagari_bold)
+            holder.binding.txtSearchWord.typeface = typeface
+            val typeface1 = ResourcesCompat.getFont(context, R.font.hindvadodara_bold)
+            holder.binding.txtSearchWordResults.typeface = typeface1
         }
     }
 

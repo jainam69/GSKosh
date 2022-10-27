@@ -34,29 +34,24 @@
                     android:id="@+id/txtSearchWord"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#4D006FFF"
-                    android:fontFamily="@font/khand_regular"
                     android:padding="@dimen/height_10"
                     android:text="@={searchWord.searchWord}"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/text_size_20" />
+                    android:textSize="@dimen/text_size_18" />
 
                 <com.gskose.utils.TfTextView
                     android:id="@+id/viewLine"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/height_1"
-                    android:background="#336C6A6A" />
+                    android:layout_height="@dimen/height_1" />
 
                 <TextView
                     android:id="@+id/txtSearchWordResults"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#4D1456AB"
-                    android:fontFamily="@font/khand_regular"
                     android:padding="@dimen/height_10"
                     android:text="@{Converter.convertListToString(searchWord.searchWordResults)}"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/text_size_20" />
+                    android:textSize="@dimen/text_size_18" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

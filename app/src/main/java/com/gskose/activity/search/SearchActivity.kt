@@ -57,7 +57,7 @@ class SearchActivity : BaseActivity(), SearchDialog.SearchInterface {
         toolbar_title.text = "Search"
         selectLanguage = intent.getStringExtra("selectLanguage")!!
         selectCriteria = intent.getStringExtra("selectCriteria")!!
-        SearchDialog(this, selectLanguage, this)
+        SearchDialog(this, selectLanguage, selectCriteria, this)
         title = if (selectLanguage.toInt() == 1) {
             resources.getString(R.string.guj_sans)
         } else {
@@ -78,7 +78,13 @@ class SearchActivity : BaseActivity(), SearchDialog.SearchInterface {
             MainActivity.launchActivity(this)
         }
         editTextTextPersonName.setOnClickListener {
-            SearchDialog(this, selectLanguage, this, editTextTextPersonName.text.toString())
+            SearchDialog(
+                this,
+                selectLanguage,
+                selectCriteria,
+                this,
+                editTextTextPersonName.text.toString()
+            )
         }
         btnSearch.setOnClickListener {
             getSearchResultNew(editTextTextPersonName.text.toString())
@@ -153,7 +159,7 @@ class SearchActivity : BaseActivity(), SearchDialog.SearchInterface {
             cardView.visibility = View.VISIBLE
             txtSearchResult.visibility = View.VISIBLE
             rvSearchWord.layoutManager = LinearLayoutManager(this)
-            rvSearchWord.adapter = SearchWordAdapter(this, response)
+            rvSearchWord.adapter = SearchWordAdapter(this, response,selectLanguage)
         } else {
             cardView.visibility = View.GONE
             txtSearchResult.visibility = View.GONE

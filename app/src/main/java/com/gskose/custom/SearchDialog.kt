@@ -31,6 +31,7 @@ import kotlinx.android.synthetic.main.dialog_search.editTextTextPersonName
 class SearchDialog(
     var context: BaseActivity,
     var selectLanguage: String,
+    var selectCriteria: String,
     var onSelected: SearchInterface,
     var text: String = ""
 ) : Dialog(context), SearchAdapter.SearchInterface {
@@ -110,11 +111,15 @@ class SearchDialog(
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                searchSuggestionsAPI(p0.toString())
+                if (selectCriteria.toInt() != 2) {
+                    searchSuggestionsAPI(p0.toString())
+                }
             }
 
             override fun afterTextChanged(p0: Editable?) {
-                searchSuggestionsAPI(p0.toString())
+                if (selectCriteria.toInt() != 2) {
+                    searchSuggestionsAPI(p0.toString())
+                }
             }
         })
     }
